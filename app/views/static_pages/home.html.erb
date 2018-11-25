@@ -1,4 +1,7 @@
-<% @title="Home" %>
+<% provide(:title,"Homepage") %>
 <h1>This is a base page</h1>
 <em> To learn more </em>
-<a href = "static_pages/about"> About </a>
+<%= link_to "about","/static_pages/about" %>
+<p></p>
+<em>To get </em>
+<%= link_to "help","/static_pages/help" %>
