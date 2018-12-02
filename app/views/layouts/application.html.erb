@@ -10,14 +10,14 @@
   </head>
 
   <body>
-    <header class="navbar navbar-fixed-top navbar">
+    <header class="navbar navbar-fixed-top navbar navbar-white">
       <div class="container">
         <%= link_to image_tag("daniilty.png", alt: "Logo"),'https://github.com/daniilty', id: "logo" %>
         <nav>
-          <ul class="nav navbar-nav navbar-right">
-            <li><%= link_to "Home", '#' %></li>
-            <li><%= link_to "Help", '#' %></li>
-            <li><%= link_to "Log in", '#' %></li>
+          <ul>
+            <li><%= link_to image_tag("hom.png", alt: "Home"), '/static_pages/home' %></li>
+            <li><%= link_to image_tag("help.png", alt: "Help"), '/static_pages/help' %></li>
+            <li><%= link_to image_tag("sin.png", alt: "Sign in"), '/static_pages/sign' %></li>
           </ul>
         </nav>
       </div>
