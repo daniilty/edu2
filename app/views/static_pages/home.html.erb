@@ -1,7 +1,8 @@
 <% provide(:title,"Homepage") %>
 <div class="center jubotron">
+	<%= image_tag("backg",alt: "backg") %>
 	<h1>Здарова!</h1>
 	<h2>Мой профиль на <%= link_to "GitHub", "https://github.com/daniilty" %></h2>
-	<h2><%= link_to image_tag("signup.png", alt: "signup"),'#', class: "btn btn-lg btn-primary" %></h2>
+	<h2><%= link_to image_tag("signup.png", alt: "signup"),'#' %>
+	</h2>
 </div>
-<%= link_to image_tag("daniilty.png", alt: "Logo"),'https://github.com/daniilty' %>
