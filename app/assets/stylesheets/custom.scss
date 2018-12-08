@@ -22,7 +22,6 @@ h1 {
 	font-size: 3em;
 	letter-spacing: -2px;
 	margin-bottom: 30px;
-	text-align: center;
 }
 h2 {
 	font-size: 1.2em;
@@ -42,7 +41,7 @@ header img {
 }
 body {
     height: 125vh;
-    background-image: url('backg.jpg');
+    background-image: url("backg.jpg");
     background-size: cover;
     font-family: 'Rubik';
     font-size: 20px;
@@ -66,4 +65,90 @@ header * {
 header li {
 	margin: 0px;
 	float: right;
+}
+@mixin box_sizing {
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-box-sizing: border-box;
+}
+.debug_dump {
+	clear: both;
+	float: left;
+	width: 100%;
+	margin-top: 50px;
+	@include box_sizing;
+}
+.user_ava {
+	float: center;
+	text-align: center;
+
+}
+.user_ava img {
+	height: 200px;
+}
+.row {
+	margin: 5% auto;
+	position: absolute;
+	top: 0;
+	left: 5%;
+	box-sizing: border-box;
+	padding: 0px;
+	width: 400px;
+	height: 600px;
+}
+.reg {
+	position: relative;
+	height: 600px;
+	background-color: #fff;
+	border-radius: 30px;
+	box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
+}
+.regimg {
+ background: transparent;
+ background-image: url("register.png");
+ background-size: cover;
+ background-position: center;
+ color: rgba(255,255,255,.0);
+ display: inline-block;
+ border: none;
+ padding: 0px;
+ width: 240px;
+ border-radius: 0px;
+ height: 120px;
+ transition: all 0.2s;
+ cursor: pointer;
+}
+.regimg:hover
+{
+ width: 245px;
+ height: 125px;
+}
+.right {
+	position: absolute;
+	top: 110px;
+	right: 220px;
+	box-sizing: border-box;
+	box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
+	padding: 40px;
+	width: 500px;
+	height: 600px;
+	background-image: url("back2.jpg");
+	background-size: cover;
+	background-position: center;
+	border-radius: 30px;
+}
+input[type="text"],
+input[type="password"]{
+	dispaly: block;
+	box-sizing: border-box;
+	margin-bottom: 10px;
+	padding: 2px;
+	width: 220px;
+	height: 32px;
+	border: none;
+	outline: none;
+	border-bottom: 1px solid #aaa;
+	font-family: "Rubik";
+	font-size: 20px;
+	transition: 0.2s ease;
 }
