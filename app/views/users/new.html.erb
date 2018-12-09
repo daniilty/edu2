@@ -4,18 +4,19 @@
 <h1>Sign up</h1>
 <p>
 <%= form_for(@user) do |u| %>
-             <%= u.label :name %>
-<%= u.text_field :name %>
+<%= u.label :name %>
+<%= u.text_field :name, class: 'form-control' %>
 <%= u.label :email %>
-<%= u.text_field :email %>
+<%= u.text_field :email, class: 'form-control' %>
 <%= u.label :password %>
-<%= u.password_field :password %>
-<%= u.label :password_confirmation, "Confirm" %><br>
-<%= u.password_field :password_confirmation %><br>
+<%= u.password_field :password, class: 'form-control' %>
+<%= u.label :password_confirmation, "Confirm" %>
+<%= u.password_field :password_confirmation, class: 'form-control' %>
 <%= u.submit "Register",class: "regimg" %>
 </p>
 <% end %>
 </div>
 </div>
 <div class="right">
+	<%= render "/shared/error_messages" %>
 	</div>

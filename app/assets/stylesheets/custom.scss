@@ -41,7 +41,7 @@ header img {
 }
 body {
     height: 125vh;
-    background-image: url("backg.jpg");
+    background-color: #fff;
     background-size: cover;
     font-family: 'Rubik';
     font-size: 20px;
@@ -78,13 +78,12 @@ header li {
 	margin-top: 50px;
 	@include box_sizing;
 }
-.user_ava {
-	float: center;
+.avacenter {
+	position: relative;
+	top: 200px;
 	text-align: center;
-
-}
-.user_ava img {
-	height: 200px;
+	margin: 5% auto;
+	padding: 3%;
 }
 .row {
 	margin: 5% auto;
@@ -97,9 +96,10 @@ header li {
 	height: 600px;
 }
 .reg {
+	color: #2d2523;
 	position: relative;
 	height: 600px;
-	background-color: #fff;
+	background-color: #eff5fa;
 	border-radius: 30px;
 	box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
 }
@@ -115,13 +115,15 @@ header li {
  width: 240px;
  border-radius: 0px;
  height: 120px;
- transition: all 0.2s;
+ transition: all 0.5s;
  cursor: pointer;
 }
 .regimg:hover
 {
- width: 245px;
- height: 125px;
+ background: transparent;
+ background-image: url("registerred.png");
+ background-size: cover;
+ background-position: center;
 }
 .right {
 	position: absolute;
@@ -142,13 +144,32 @@ input[type="password"]{
 	dispaly: block;
 	box-sizing: border-box;
 	margin-bottom: 10px;
+	color: #352c2f;
+	background-color: #eff5fa;
 	padding: 2px;
 	width: 220px;
 	height: 32px;
 	border: none;
+	border-radius: 10px;
 	outline: none;
-	border-bottom: 1px solid #aaa;
+	border-bottom: 0px solid #aaa;
 	font-family: "Rubik";
 	font-size: 20px;
-	transition: 0.2s ease;
+	transition: 0.1s ease;
+	box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
 }
+.err {
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	box-sizing: border-box;
+	padding: 40px;
+	width: 500px;
+	height: 600px;
+	background-color: rgba(255, 255, 255, 0.9);
+	border-radius: 29px;
+	font-family: "Rubik";
+	color: #5e2535;
+	font-size: 25px;
+}
+
