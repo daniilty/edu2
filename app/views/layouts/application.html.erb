@@ -14,11 +14,19 @@
       <div class="container">
         <%= link_to image_tag("daniilty.png", alt: "Logo"),'https://github.com/daniilty', id: "logo" %>
         <nav>
-          <ul>
-            <li><%= link_to image_tag("hom.png", alt: "Home"), '/static_pages/home' %></li>
-            <li><%= link_to image_tag("help.png", alt: "Help"), '/static_pages/help' %></li>
-            <li><%= link_to image_tag("sin.png", alt: "Sign in"), '/static_pages/sign' %></li>
-          </ul>
+          <% if logged_in? %>
+             <div class="dropdown">
+              <li><%= link_to image_tag("myprof.png"), '#' %></li>
+              <div class="dropdown-content">
+                <li><%= link_to image_tag("main.png"), '#' %></li>
+                <li><%= link_to image_tag("settings.png"), '#' %></li>
+                <li><%= link_to image_tag("logout.png"),logout_path, method: "delete"  %></li>
+              </div>
+             </div>
+             <% else %>
+            <li><%= link_to image_tag("sin.png", alt: "Sign in"), '/sessions/new' %></li>
+            <% end %>
+          
         </nav>
       </div>
     </header>
