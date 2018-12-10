@@ -1,7 +1,9 @@
 <% provide(:title,"Homepage") %>
 <div class="center jubotron">
-	<h1>Здарова!</h1>
-	<h2>Мой профиль на <%= link_to "GitHub", "https://github.com/daniilty" %></h2>
+	<h1>Hello!</h1>
+	<h2>My <%= link_to "GitHub", "https://github.com/daniilty" %> profile.</h2>
+	<% if !logged_in? %>
 	<h2><%= link_to image_tag("signup.png", alt: "signup"),'/users/new' %>
+		<% end %>
 	</h2>
 </div>

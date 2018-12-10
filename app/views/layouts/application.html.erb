@@ -18,7 +18,7 @@
              <div class="dropdown">
               <li><%= link_to image_tag("myprof.png"), '#' %></li>
               <div class="dropdown-content">
-                <li><%= link_to image_tag("main.png"), '#' %></li>
+                <li><%= link_to image_tag("main.png"), current_user %></li>
                 <li><%= link_to image_tag("settings.png"), '#' %></li>
                 <li><%= link_to image_tag("logout.png"),logout_path, method: "delete"  %></li>
               </div>
