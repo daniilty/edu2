@@ -5,6 +5,7 @@ class SessionsController < ApplicationController
   	user = User.find_by(email: params[:session][:email].downcase)
   	if user && user.authenticate(params[:session][:password])
       redirect_to(user)
+      remember(user)
       log_in(user)
   	else
       @loc = "Invalid email or password"
@@ -13,7 +14,7 @@ class SessionsController < ApplicationController
   	end
   end
   def destroy
-    log_out
+    log_out if logged_in?
     redirect_to root_url
   end
 end
